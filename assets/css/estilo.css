@@ -1,0 +1,114 @@
+.fondo-login{
+	background-image: url(assets/img/background.jpg) !important;
+    background-origin: initial;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.negrita{
+	font-weight: bold !important;
+}
+.centrar{
+	text-align: center !important;
+}
+.mayusculas{
+	text-transform: uppercase !important;
+}
+.requerido{
+	color: #e00d0d; 
+}
+.tabla{
+    display: table;
+    width: 100%; 
+}
+.columna{
+    display: table-cell;
+    vertical-align: middle;
+}
+.ocultar{
+    display: none; 
+}
+.parsley-required{
+	color:#e00d0d; 
+	list-style: none; 
+}
+
+.breadcrumb-item a{
+    color: #6c757d !important; 
+}
+
+.foto-pricipal{
+    height: 70px;
+    width: 70px;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    display: inline-block;
+    box-shadow: 1px 1px;
+    background-origin: content-box;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.sidebar-mini .foto-pricipal{
+    height: 35px;
+    width: 35px;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    display: inline-block;
+    box-shadow: 1px 1px;
+    background-origin: content-box;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.foto-perfil{
+	height: 100px;
+    width: 100px;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    display: inline-block;
+    box-shadow: 1px 1px;
+    background-origin: content-box;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.foto-empresa{
+    height: 300px;
+    width: 300px;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    display: inline-block;
+    box-shadow: 1px 1px;
+    background-origin: content-box;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.foto-mini-empresa{
+    height: 35px;
+    width: 35px;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    display: inline-block;
+    box-shadow: 1px 1px;
+    background-origin: content-box;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.imagen-novedad{
+    height: 144px;
+    width: 144px;
+    display: inline-block;
+    background-origin: content-box;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.novedad{
+   color: #6c757d !important;  
+   text-decoration: none !important;
+}
+
+.novedad:hover{
+    box-shadow: 5px 6px 5px 3px #5c635c;
+}
