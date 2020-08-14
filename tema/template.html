@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<?php 
+$oLista = new Lista('modulo');
+$oLista->setFiltro("estado","=",1);
+$oLista->setOrden("orden","ASC");
+$aModulos=$oLista->getLista();
+?>
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+  <title>Juriscon | <?php echo $page; ?></title>
+  <!-- General CSS Files -->
+  <link rel="stylesheet" href="<?php echo $URL ?>assets/css/app.min.css">
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="<?php echo $URL ?>assets/css/style.css">
+  <link rel="stylesheet" href="<?php echo $URL ?>assets/css/components.css">
+  <link rel="stylesheet" href="<?php echo $URL ?>assets/bundles/jqvmap/dist/jqvmap.min.css">
+  <!-- Custom style CSS -->
+  <link rel="stylesheet" href="<?php echo $URL ?>assets/css/custom.css">
+  <link rel="stylesheet" href="<?php echo $URL ?>assets/css/estilo.css?<?php echo uniqid(); ?>">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap">
+  <link rel="stylesheet" href="<?php echo $URL ?>assets/bundles/datatables/datatables.min.css">
+  <link rel="stylesheet" href="<?php echo $URL ?>assets/bundles/datatables/DataTables-1.10.16/css/dataTables.bootstrap4.min.css">
+  
+  <link rel="stylesheet" href="<?php echo $URL; ?>assets/bundles/select2/dist/css/select2.min.css">
+  <link rel='shortcut icon' type='image/x-icon' href='<?php echo $URL ?>assets/img/smart.ico' />
+  <script src="<?php echo $URL ?>assets/js/app.min.js"></script>
+  <script src="<?php echo $URL ?>assets/js/scripts.js"></script>
+</head>
+
+<body>
+  <div class="loader"></div>
+  <div id="app">
+    <div class="main-wrapper main-wrapper-1">
+      <div class="navbar-bg"></div>
+      <nav class="navbar navbar-expand-lg main-navbar sticky">
+        <div class="form-inline mr-auto">
+          <ul class="navbar-nav mr-3">
+            <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg collapse-btn"> <i data-feather="menu"></i></a></li>
+          </ul>
+        </div>
+        <ul class="navbar-nav navbar-right">
+          <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown"
+              class="nav-link nav-link-lg message-toggle"><i class="mailAnim fas fa-bell"></i>
+              <span class="badge headerBadge1">
+              </span> </a>
+            <div class="dropdown-menu dropdown-list dropdown-menu-right pullDown">
+              <div class="dropdown-header">
+                Messages
+                <div class="float-right">
+                  <a href="#">Mark All As Read</a>
+                </div>
+              </div>
+              <div class="dropdown-list-content dropdown-list-message">
+                <a href="#" class="dropdown-item"> <span class="dropdown-item-avatar text-white"> <img alt="image" src="<?php echo $URL ?>assets/img/users/user-1.png" class="rounded-circle">
+                  </span> <span class="dropdown-item-desc"> <span class="message-user">John
+                      Deo</span>
+                    <span class="time messege-text">Please check your mail !!</span>
+                    <span class="time">2 Min Ago</span>
+                  </span>
+                </a> <a href="#" class="dropdown-item"> <span class="dropdown-item-avatar text-white">
+                    <img alt="image" src="assets/img/users/user-2.png" class="rounded-circle">
+                  </span> <span class="dropdown-item-desc"> <span class="message-user">Sarah
+                      Smith</span> <span class="time messege-text">Request for leave
+                      application</span>
+                    <span class="time">5 Min Ago</span>
+                  </span>
+                </a> <a href="#" class="dropdown-item"> <span class="dropdown-item-avatar text-white">
+                    <img alt="image" src="assets/img/users/user-5.png" class="rounded-circle">
+                  </span> <span class="dropdown-item-desc"> <span class="message-user">Jacob
+                      Ryan</span> <span class="time messege-text">Your payment invoice is
+                      generated.</span> <span class="time">12 Min Ago</span>
+                  </span>
+                </a> <a href="#" class="dropdown-item"> <span class="dropdown-item-avatar text-white">
+                    <img alt="image" src="assets/img/users/user-4.png" class="rounded-circle">
+                  </span> <span class="dropdown-item-desc"> <span class="message-user">Lina
+                      Smith</span> <span class="time messege-text">hii John, I have upload
+                      doc
+                      related to task.</span> <span class="time">30
+                      Min Ago</span>
+                  </span>
+                </a> <a href="#" class="dropdown-item"> <span class="dropdown-item-avatar text-white">
+                    <img alt="image" src="assets/img/users/user-3.png" class="rounded-circle">
+                  </span> <span class="dropdown-item-desc"> <span class="message-user">Jalpa
+                      Joshi</span> <span class="time messege-text">Please do as specify.
+                      Let me
+                      know if you have any query.</span> <span class="time">1
+                      Days Ago</span>
+                  </span>
+                </a> <a href="#" class="dropdown-item"> <span class="dropdown-item-avatar text-white">
+                    <img alt="image" src="assets/img/users/user-2.png" class="rounded-circle">
+                  </span> <span class="dropdown-item-desc"> <span class="message-user">Sarah
+                      Smith</span> <span class="time messege-text">Client Requirements</span>
+                    <span class="time">2 Days Ago</span>
+                  </span>
+                </a>
+              </div>
+              <div class="dropdown-footer text-center">
+                <a href="#">View All <i class="fas fa-chevron-right"></i></a>
+              </div>
+            </div>
+          </li>
+          <li class="dropdown"><a href="#" data-toggle="dropdown"
+              class="nav-link dropdown-toggle nav-link-lg nav-link-user"> <img alt="image" src="<?php echo $URL ?>assets/img/user.png"
+                class="user-img-radious-style"> <span class="d-sm-none d-lg-inline-block"></span></a>
+            <div class="dropdown-menu dropdown-menu-right pullDown">
+              <div class="dropdown-title">Hola <?php echo $_SESSION["nombreUsuario"]; ?></div>
+              <a href="profile.html" class="dropdown-item has-icon"> <i class="far fa-user"></i> Perfil </a> 
+              <!-- <a href="timeline.html" class="dropdown-item has-icon"> <i class="fas fa-bolt"></i> Activities </a>  -->
+              <a href="<?php echo $URL ?>configuracion" class="dropdown-item has-icon"> <i class="fas fa-cog"></i> Configuración </a>
+              <div class="dropdown-divider"></div>
+              <a href="<?php echo $URL ?>functions/sesion/cerrarsesion.php" class="dropdown-item has-icon text-danger"> <i class="fas fa-sign-out-alt"></i>
+                Cerrar sesión
+              </a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <div class="main-sidebar sidebar-style-2">
+        <aside id="sidebar-wrapper">
+          <div class="sidebar-brand">
+            <a href="index.html"> <img alt="image" src="<?php echo $URL ?>assets/img/SmartBusslogo-04.png" class="header-logo" /> 
+              <!-- <span class="logo-name">Juriscon</span> -->
+            </a>
+          </div>
+          <div class="sidebar-user">
+            <div class="sidebar-user-picture">
+              <div class="foto-pricipal" style="background-image: url(<?php echo $_SESSION['foto']; ?>)"></div>
+              <!--<img alt="image" src="<?php echo $URL ?>assets/img/user.png">-->
+            </div>
+            <div class="sidebar-user-details">
+              <div class="user-name"><?php echo $_SESSION["nombreUsuario"]; ?></div>
+              <div class="user-role"><?php echo $_SESSION["apellidoUsuario"]; ?></div>
+            </div>
+          </div>
+          <ul class="sidebar-menu">
+            <li class="menu-header">Menu</li>
+            <li class="dropdown <?php if($page=='dashboard'){ ?> active <?php } ?>">
+              <a href="<?php echo $URL; ?>dashboard" class="nav-link"><i class="fas fa-chalkboard-teacher"></i><span>Dashboard</span></a>
+            </li>
+            <?php foreach($aModulos as $iModulo){ 
+
+            $oLista = new Lista('menu');
+            $oLista->setFiltro("estado","=",1);
+            $oLista->setFiltro("idModulo","=",$iModulo["idModulo"]);
+            $oLista->setOrden("orden","ASC");
+            $aMenus=$oLista->getLista();
+
+            $active=""; 
+            $sMenu='<ul class="dropdown-menu">';
+                foreach($aMenus as $iMenu){ 
+                  $activeMenu=""; 
+                  if($iMenu["url"]==$page){
+                    $activeMenu="active";
+                    $active="active"; 
+                  }
+                $sMenu.='<li class="'.$activeMenu.'"><a class="nav-link" href="'.$URL.$iMenu["url"].'">'.$iMenu["nombre"].'</a></li>';
+                 } 
+              $sMenu.='</ul>
+            </li>';
+            ?>
+            <li class="dropdown <?php echo $active; ?>">
+              <a href="javascript:void(0)" class="menu-toggle nav-link has-dropdown"><i class="<?php echo $iModulo["icono"]; ?>"></i><span><?php echo $iModulo["nombre"]; ?></span></a>
+              <?php echo $sMenu; ?>
+            <?php } ?>
+            
+          </ul>
+        </aside>
+      </div>
+      </div>
+      <!-- Main Content -->
+      <div class="main-content">
+        <?php if(file_exists($cont)){ require_once($cont); }else{ require_once("tema/404.html"); } ?>
+      </div>
+      <footer class="main-footer">
+        <div class="footer-left">
+          Copyright &copy; <?php echo date("Y"); ?> <div class="bullet"></div> <a href="#">Juriscon</a>
+        </div>
+        <div class="footer-right">
+        </div>
+      </footer>
+    </div>
+  </div>
+  <script type="text/javascript"> var URL="<?php echo $URL; ?>"</script>
+  <!-- General JS Scripts -->
+  
+  <!-- JS Libraies -->
+  <script src="<?php echo $URL ?>assets/bundles/apexcharts/apexcharts.min.js"></script>
+  <script src="<?php echo $URL ?>assets/bundles/amcharts4/core.js"></script>
+  <script src="<?php echo $URL ?>assets/bundles/amcharts4/charts.js"></script>
+  <script src="<?php echo $URL ?>assets/bundles/amcharts4/animated.js"></script>
+  <script src="<?php echo $URL ?>assets/bundles/jqvmap/dist/jquery.vmap.min.js"></script>
+  <script src="<?php echo $URL ?>assets/bundles/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+  
+  <!-- Custom JS File -->
+  <script src="<?php echo $URL; ?>assets/js/jquery.mask.js"></script>
+  <script src="<?php echo $URL; ?>assets/js/parsley.min.js"></script>
+  <script src="<?php echo $URL ?>assets/js/custom.js"></script>
+  <script src="<?php echo $URL; ?>assets/scripts/<?php echo $page; ?>.js?<?php echo uniqid(); ?>"></script>
+  <script src="<?php echo $URL; ?>assets/scripts/inicio.js?<?php echo uniqid(); ?>"></script>
+  <script src="<?php echo $URL; ?>assets/bundles/sweetalert/sweetalert.min.js"></script>
+  <script src="<?php echo $URL; ?>assets/js/page/sweetalert.js"></script>
+  <script src="<?php echo $URL; ?>assets/bundles/datatables/datatables.min.js"></script>
+  <script src="<?php echo $URL; ?>assets/bundles/datatables/DataTables-1.10.16/js/dataTables.bootstrap4.min.js"></script>
+  <script src="<?php echo $URL; ?>assets/js/page/datatables.js"></script>
+  <script src="<?php echo $URL; ?>assets/bundles/select2/dist/js/select2.full.min.js"></script>
+  <script src="<?php echo $URL; ?>assets/bundles/jquery.formatCurrency-1.4.0/jquery.formatCurrency-1.4.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</body>
+
+
+<!-- Mirrored from www.radixtouch.in/templates/logicswave/jiva/source/light/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 22 May 2020 13:34:34 GMT -->
+</html>
